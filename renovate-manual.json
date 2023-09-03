@@ -1,0 +1,7 @@
+{
+	"extends": [
+		"github>Nivl/configs:renovate"
+	],
+	"dependencyDashboardApproval": true,
+	"rebaseWhen": "never"
+}

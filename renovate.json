@@ -1,0 +1,49 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    ":ignoreModulesAndTests",
+    "workarounds:all"
+  ],
+  "dependencyDashboard": true,
+  "timezone": "America/Los_Angeles",
+  "postUpdateOptions": [
+    "npmDedupe",
+    "yarnDedupeHighest",
+    "gomodTidy",
+    "gomodUpdateImportPaths",
+    "pnpmDedupe"
+  ],
+  "semanticCommits": "enabled",
+  "semanticCommitType": "build",
+  "prHourlyLimit": 0,
+  "rangeStrategy": "pin",
+  "packageRules": [
+    {
+      "groupName": "patch",
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "matchUpdateTypes": [
+        "patch"
+      ]
+    },
+    {
+      "groupName": "minor",
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "matchUpdateTypes": [
+        "minor"
+      ]
+    },
+    {
+      "groupName": "major",
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
+    }
+  ]
+}
