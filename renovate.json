@@ -2,10 +2,15 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     ":ignoreModulesAndTests",
-    "workarounds:all"
+    "workarounds:all",
+    "npm:unpublishSafe",
+    "packages:eslint"
   ],
   "dependencyDashboard": true,
   "timezone": "America/Los_Angeles",
+  "schedule": [
+    "at 6:00 pm on Friday"
+  ],
   "postUpdateOptions": [
     "npmDedupe",
     "yarnDedupeHighest",
@@ -43,6 +48,21 @@
       ],
       "matchUpdateTypes": [
         "major"
+      ]
+    },
+    {
+      "groupName": "eslint",
+      "matchPackageNames": [
+        "@types/eslint",
+        "babel-eslint",
+        "@babel/eslint-parser",
+        "@eslint/**",
+        "@eslint-community/**",
+        "@stylistic/eslint-plugin**",
+        "@types/eslint__**",
+        "@typescript-eslint/**",
+        "typescript-eslint",
+        "eslint**"
       ]
     }
   ]
