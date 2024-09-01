@@ -9,7 +9,7 @@
   "dependencyDashboard": true,
   "timezone": "America/Los_Angeles",
   "schedule": [
-    "at 6:00 pm on Friday"
+    "on friday at 6:00pm"
   ],
   "postUpdateOptions": [
     "npmDedupe",
