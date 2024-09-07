@@ -8,9 +8,7 @@
   ],
   "dependencyDashboard": true,
   "timezone": "America/Los_Angeles",
-  "schedule": [
-    "on friday at 6:00pm"
-  ],
+  "schedule": "before 6:00pm on Friday",
   "postUpdateOptions": [
     "npmDedupe",
     "yarnDedupeHighest",
