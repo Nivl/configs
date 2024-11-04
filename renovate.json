@@ -22,20 +22,12 @@
   "rangeStrategy": "pin",
   "packageRules": [
     {
-      "groupName": "patch",
+      "groupName": "patch+minor",
       "matchPackagePatterns": [
         "*"
       ],
       "matchUpdateTypes": [
-        "patch"
-      ]
-    },
-    {
-      "groupName": "minor",
-      "matchPackagePatterns": [
-        "*"
-      ],
-      "matchUpdateTypes": [
+        "patch",
         "minor"
       ]
     },
