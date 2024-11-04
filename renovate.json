@@ -41,7 +41,7 @@
       ]
     },
     {
-      "groupName": "eslint",
+      "groupName": "eslint major",
       "matchPackageNames": [
         "@types/eslint",
         "babel-eslint",
@@ -53,6 +53,9 @@
         "@typescript-eslint/**",
         "typescript-eslint",
         "eslint**"
+      ],
+      "updateTypes": [
+        "major"
       ]
     },
     {
