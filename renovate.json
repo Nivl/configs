@@ -59,6 +59,16 @@
       ]
     },
     {
+      "groupName": "tailwind/heroui major",
+      "matchPackageNames": [
+        "@heroui/**",
+        "**tailwind**"
+      ],
+      "updateTypes": [
+        "major"
+      ]
+    },
+    {
       "matchPackagePatterns": [
         "postgres"
       ],
