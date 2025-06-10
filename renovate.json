@@ -69,6 +69,17 @@
       ]
     },
     {
+      "groupName": "Storybook major",
+      "matchPackageNames": [
+        "@storybook/**",
+        "storybook**",
+        "**storybook"
+      ],
+      "updateTypes": [
+        "major"
+      ]
+    },
+    {
       "matchPackagePatterns": [
         "postgres"
       ],
