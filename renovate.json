@@ -32,6 +32,15 @@
       ]
     },
     {
+      "groupName": "digest",
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "matchUpdateTypes": [
+        "digest"
+      ]
+    },
+    {
       "groupName": "major",
       "matchPackagePatterns": [
         "*"
