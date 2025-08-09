@@ -38,7 +38,20 @@
       ],
       "matchUpdateTypes": [
         "digest"
-      ]
+      ],
+      "automerge": false
+    },
+    {
+      "description": "Github Actions",
+      "groupName": "digest",
+      "matchSourceUrls": [
+        "https://github.com/**/*"
+      ],
+      "matchUpdateTypes": [
+        "digest"
+      ],
+      "changelogUrl": "{{sourceUrl}}/compare/{{currentDigest}}..{{newDigest}}",
+      "automerge": false
     },
     {
       "groupName": "major",
