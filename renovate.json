@@ -63,39 +63,51 @@
       ]
     },
     {
-      "groupName": "eslint major",
+      "groupName": "eslint",
       "matchPackageNames": [
         "@types/eslint",
         "babel-eslint",
         "@babel/eslint-parser",
         "@eslint/**",
         "@eslint-community/**",
-        "@stylistic/eslint-plugin**",
-        "@types/eslint__**",
+        "@stylistic/eslint-plugin*",
+        "@types/eslint__*",
         "@typescript-eslint/**",
         "typescript-eslint",
-        "eslint**"
+        "eslint*"
       ],
       "updateTypes": [
         "major"
       ]
     },
     {
-      "groupName": "tailwind/heroui major",
+      "groupName": "Design System",
       "matchPackageNames": [
         "@heroui/**",
-        "**tailwind**"
+        "*tailwind*",
+        "@internationalized/date"
+      ]
+    },
+    {
+      "groupName": "React/Next",
+      "matchPackageNames": [
+        "next-*",
+        "@next/**",
+        "react",
+        "@types/react",
+        "react-*",
+        "@types/react-*"
       ],
       "updateTypes": [
         "major"
       ]
     },
     {
-      "groupName": "Storybook major",
+      "groupName": "Storybook",
       "matchPackageNames": [
         "@storybook/**",
-        "storybook**",
-        "**storybook"
+        "storybook*",
+        "@chromatic-com/storybook"
       ],
       "updateTypes": [
         "major"
@@ -109,6 +121,13 @@
         "major"
       ],
       "enabled": false
+    },
+    {
+      "groupName": "Echo",
+      "matchPackageNames": [
+        "github.com/labstack/**"
+      ],
+      "enabled": true
     }
   ]
 }
