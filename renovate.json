@@ -81,10 +81,22 @@
       ]
     },
     {
-      "groupName": "tailwind/heroui major",
+      "groupName": "Design System",
       "matchPackageNames": [
         "@heroui/**",
-        "**tailwind**"
+        "**tailwind**",
+        "@internationalized/date"
+      ]
+    },
+    {
+      "groupName": "React/Next major",
+      "matchPackageNames": [
+        "next**",
+        "@next/**",
+        "react",
+        "@types/react",
+        "react-dom",
+        "@types/react-dom"
       ],
       "updateTypes": [
         "major"
@@ -95,7 +107,8 @@
       "matchPackageNames": [
         "@storybook/**",
         "storybook**",
-        "**storybook"
+        "**storybook",
+        "@chromatic-com/storybook"
       ],
       "updateTypes": [
         "major"
@@ -109,6 +122,16 @@
         "major"
       ],
       "enabled": false
+    },
+    {
+      "groupName": "labstack/echo major",
+      "matchPackageNames": [
+        "github.com/labstack/echo/v*"
+      ],
+      "updateTypes": [
+        "major"
+      ],
+      "enabled": true
     }
   ]
 }
