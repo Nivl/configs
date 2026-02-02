@@ -3,7 +3,6 @@
   "extends": [
     ":ignoreModulesAndTests",
     "workarounds:all",
-    "npm:unpublishSafe",
     "packages:eslint"
   ],
   "dependencyDashboard": true,
@@ -12,14 +11,18 @@
   "postUpdateOptions": [
     "npmDedupe",
     "yarnDedupeHighest",
+    "pnpmDedupe",
     "gomodTidy",
-    "gomodUpdateImportPaths",
-    "pnpmDedupe"
+    "gomodUpdateImportPaths"
   ],
   "semanticCommits": "enabled",
   "semanticCommitType": "build",
   "prHourlyLimit": 0,
   "rangeStrategy": "pin",
+  "minimumReleaseAge": "14 days",
+  "minimumReleaseAgeBehaviour": "timestamp-optional",
+  "prCreation": "not-pending",
+  "internalChecksFilter": "strict",
   "packageRules": [
     {
       "groupName": "patch+minor",
@@ -125,7 +128,7 @@
     {
       "groupName": "Echo",
       "matchPackageNames": [
-        "github.com/labstack/**"
+        "github.com/labstack/echo/v*"
       ],
       "enabled": true
     }
