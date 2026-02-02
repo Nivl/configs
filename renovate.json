@@ -9,6 +9,7 @@
   "dependencyDashboard": true,
   "timezone": "America/Los_Angeles",
   "schedule": "before 6:00pm on Friday",
+  "minimumReleaseAge": "14 days",
   "postUpdateOptions": [
     "npmDedupe",
     "yarnDedupeHighest",
