@@ -1,10 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    ":ignoreModulesAndTests",
-    "workarounds:all",
-    "packages:eslint"
-  ],
+  "extends": [":ignoreModulesAndTests", "workarounds:all", "packages:eslint"],
   "dependencyDashboard": true,
   "timezone": "America/Los_Angeles",
   "schedule": "before 6:00pm on Friday",
@@ -26,44 +22,27 @@
   "packageRules": [
     {
       "groupName": "patch+minor",
-      "matchPackagePatterns": [
-        "*"
-      ],
-      "matchUpdateTypes": [
-        "patch",
-        "minor"
-      ]
+      "matchPackagePatterns": ["*"],
+      "matchUpdateTypes": ["patch", "minor"]
     },
     {
       "groupName": "digest",
-      "matchPackagePatterns": [
-        "*"
-      ],
-      "matchUpdateTypes": [
-        "digest"
-      ],
+      "matchPackagePatterns": ["*"],
+      "matchUpdateTypes": ["digest"],
       "automerge": false
     },
     {
       "description": "Github Actions",
       "groupName": "digest",
-      "matchSourceUrls": [
-        "https://github.com/**/*"
-      ],
-      "matchUpdateTypes": [
-        "digest"
-      ],
+      "matchSourceUrls": ["https://github.com/**/*"],
+      "matchUpdateTypes": ["digest"],
       "changelogUrl": "{{sourceUrl}}/compare/{{currentDigest}}..{{newDigest}}",
       "automerge": false
     },
     {
       "groupName": "major",
-      "matchPackagePatterns": [
-        "*"
-      ],
-      "matchUpdateTypes": [
-        "major"
-      ]
+      "matchPackagePatterns": ["*"],
+      "matchUpdateTypes": ["major"]
     },
     {
       "groupName": "eslint",
@@ -79,17 +58,21 @@
         "typescript-eslint",
         "eslint*"
       ],
-      "updateTypes": [
-        "major"
-      ]
+      "updateTypes": ["major"]
+    },
+    {
+      "groupName": "oxc",
+      "matchPackageNames": ["oxlint", "oxlint-tsgolint", "oxfmt"],
+      "updateTypes": ["major"]
+    },
+    {
+      "groupName": "oxc",
+      "matchPackageNames": ["oxlint", "oxlint-tsgolint", "oxfmt"],
+      "updateTypes": ["minor"]
     },
     {
       "groupName": "Design System",
-      "matchPackageNames": [
-        "@heroui/**",
-        "*tailwind*",
-        "@internationalized/date"
-      ]
+      "matchPackageNames": ["@heroui/**", "*tailwind*", "@internationalized/date"]
     },
     {
       "groupName": "React/Next",
@@ -101,35 +84,21 @@
         "react-*",
         "@types/react-*"
       ],
-      "updateTypes": [
-        "major"
-      ]
+      "updateTypes": ["major"]
     },
     {
       "groupName": "Storybook",
-      "matchPackageNames": [
-        "@storybook/**",
-        "storybook*",
-        "@chromatic-com/storybook"
-      ],
-      "updateTypes": [
-        "major"
-      ]
+      "matchPackageNames": ["@storybook/**", "storybook*", "@chromatic-com/storybook"],
+      "updateTypes": ["major"]
     },
     {
-      "matchPackagePatterns": [
-        "postgres"
-      ],
-      "updateTypes": [
-        "major"
-      ],
+      "matchPackagePatterns": ["postgres"],
+      "updateTypes": ["major"],
       "enabled": false
     },
     {
       "groupName": "Echo",
-      "matchPackageNames": [
-        "github.com/labstack/echo/v*"
-      ],
+      "matchPackageNames": ["github.com/labstack/echo/v*"],
       "enabled": true
     }
   ]
